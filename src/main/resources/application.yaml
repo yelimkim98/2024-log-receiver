@@ -9,3 +9,15 @@ spring:
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+cloud:
+  aws:
+    s3:
+      bucket: '2024-yerim-log-test'
+    region:
+      static: 'ap-northeast-2'
+    stack:
+      auto: false
+    credentials:
+      access-key: ${AWS_S3_ACCESS_KEY}
+      secret-key: ${AWS_S3_SECRET_ACCESS_KEY}
