@@ -1,0 +1,11 @@
+server:
+  port:
+    8081
+spring:
+  kafka:
+    bootstrap-servers: "3.36.93.236:9092"
+    consumer:
+      group-id: "yerim"
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer

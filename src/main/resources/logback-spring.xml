@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>[%d{yyyy-MM-dd HH:mm:ss}:%-3relative %-5level ${PID:-} --- [%15.15thread] %-40.40logger{36} : %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <logger name="naver.kiel0103.logreceiver" level="debug"/>
+
+    <!-- 기본 로그 레벨은 INFO로 설정-->
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
